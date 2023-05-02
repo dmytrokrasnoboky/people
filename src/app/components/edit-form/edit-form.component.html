@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h4 class="pt-3 pb-5">Edit user</h4>
+  <form [formGroup]="form" (submit)="onSubmit()" >
+    <div class="form-group">
+      <label for="firstName">First name:</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last name:</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName">
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control" id="age" formControlName="age">
+    </div>
+    <div class="form-group">
+      <label for="workTitle">Work:</label>
+      <input type="text" class="form-control" id="workTitle" formControlName="workTitle">
+    </div>
+    <div class="mt-2">
+      <button type="submit" class="btn btn-primary mr-2">Save changes</button>
+      <button type="button" class="btn btn-dark" [routerLink]="'../../'">Go back</button>
+    </div>
+  </form>
+</div>

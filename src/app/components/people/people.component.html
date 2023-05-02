@@ -1,0 +1,25 @@
+<div class="container" *ngIf="(service.people$ | async) as people">
+  <ng-template *ngIf="people.length; else empty">
+    <h4 class="pt-3 pb-5">List of people</h4>
+    <div *ngFor="let person of people" class="card mx-auto my-3">
+      <div class="card-body d-flex flex-sm-row flex-column justify-content-between align-items-center">
+        <h5 class="flex-grow-1 p-2">{{ person.firstName + ' ' + person.lastName }}</h5>
+        <h6 class="card-text flex-grow-1 p-2">Age: {{ person.age }}</h6>
+        <p class="card-text flex-grow-1 p-2">{{ person.workTitle }}</p>
+
+        <div class="d-flex flex-grow-1">
+          <button class="btn btn-warning mr-2 material-icons-round d-flex align-items-center" type="button" (click)="editPerson(person)">
+            <span class="material-icons">edit</span>
+          </button>
+          <button class="btn btn-danger material-icons-round d-flex align-items-center" type="button" (click)="deletePerson(person)">
+            <span class="material-icons">delete</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<ng-template #empty>
+  Nothing found
+</ng-template>

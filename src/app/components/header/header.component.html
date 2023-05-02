@@ -1,0 +1,18 @@
+<!-- TODO: make the header a responsive navigation menu with responsive layout + -->
+<!-- Create a link to the people component/page -->
+<header class="navbar">
+  <ng-container *ngTemplateOutlet="navigation"></ng-container>
+  <span class="navbar__icon material-icons" (click)="isOpen = !isOpen">{{isOpen ? 'menu_open' : 'menu'}}</span>
+</header>
+
+<div class="side-panel" [ngClass]="{'side-panel__active': isOpen}" (click)="isOpen = !isOpen">
+  <ng-container *ngTemplateOutlet="navigation"></ng-container>
+</div>
+
+<ng-template #navigation>
+  <h3 class="title">LandGate Test</h3>
+  <ul class="list">
+    <li><a routerLink="home" routerLinkActive="active" class="link">Home</a></li>
+    <li><a routerLink="people_ngrx" routerLinkActive="active" class="link">People ngrx</a></li>
+  </ul>
+</ng-template>

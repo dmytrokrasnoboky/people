@@ -1,0 +1,36 @@
+.footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: #f2f2f2;
+}
+
+.item {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+
+  font-size: 16px;
+
+  .title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+
+  .list {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+
+    a {
+      font-weight: 400;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
