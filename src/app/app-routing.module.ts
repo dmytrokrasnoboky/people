@@ -7,11 +7,6 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  // {
-  //   path: 'people',
-  //   pathMatch: 'full',
-  //   loadChildren: () => import('./components/people/people.module').then((m) => m.PeopleModule)
-  // },
   {
     path: 'people_ngrx',
     component: PeopleNgrxComponent

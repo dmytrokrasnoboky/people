@@ -10,7 +10,7 @@ import {PeopleService} from '../../../../services/people.service';
 
 @Injectable()
 export class PeopleEffects {
-  loadPeoples$ = createEffect(() => {
+  loadPeople$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PeopleActions.loadPeople),
       concatMap(() => this.service.getPeopleFromServer()),
