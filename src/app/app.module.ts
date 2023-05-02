@@ -35,12 +35,13 @@ import { PeopleNgrxModule } from './components/people-ngrx/people-ngrx.module';
     // Instrumentation must be imported after importing StoreModule (config is optional)
     StoreDevtoolsModule.instrument({
       maxAge: 100, // Retains last 100 states
-      logOnly: environment.production, // Restrict extension to log-only mode
+      logOnly: environment.production // Restrict extension to log-only mode
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     PeopleNgrxModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -9,6 +9,7 @@ export interface IPeopleState {
   people: PersonModel[];
   pending: boolean;
 }
+
 export const initialState: IPeopleState = {
   people: [],
   pending: false
